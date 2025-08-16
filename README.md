@@ -6,7 +6,7 @@ This project scrapes football match data from totalcorner.com
 
 Currently the code scrapes data as per below hierarchy is Continent -> Country -> League
 
-For this requirement I had scraped specifically for America Continent(https://www.totalcorner.com/league/continent/5)
+For this requirement I had scraped specifically for America Continent(totalcorner.com/league/continent/5)
 
 ## As data is very large, we are only getting data for "Argentina", "Brazil". It is dynamic but, to reduce mutiple calls we are using only 2 countries.
 
@@ -62,16 +62,15 @@ For this requirement I had scraped specifically for America Continent(https://ww
     ```bash
     python src/main.py
     ```
-    This script will execute the scraping and processing tasks. Upon successful completion, a `football_matches.csv` file will be created in the `data/` directory.
+    This script will execute the scraping and processing tasks. Upon successful completion, a `scrapped_data.csv` file will be created in the `data/` directory.
 
 ---
 
 ## 📈 Example Data Output
 
-The final `football_matches.csv` file will have a clean, tabular structure similar to this:
+The final `scrapped_data.csv` file will have a clean, tabular structure similar to this:
 
-| Match ID | Home Team | Away Team | Full Time Result | Home Team Goals | Away Team Goals | Possession (%) | Shots on Target |
-| :------: | :-------: | :-------: | :--------------: | :-------------: | :-------------: | :------------: | :-------------: |
-|   101    |  Team A   |  Team B   |     Home Win     |        3        |        1        |       55       |        6        |
-|   102    |  Team C   |  Team D   |       Draw       |        2        |        2        |       48       |        4        |
-|   103    |  Team E   |  Team F   |     Away Win     |        0        |        1        |       62       |        3        |
+|       date       |        league        |  country  |      home_team      |    away_team     | full_time_home_goals | full_time_away_goals | full_time_home_corners | full_time_away_corners | half_time_home_corners | half_time_away_corners | match_id  |
+| :--------------: | :------------------: | :-------: | :-----------------: | :--------------: | :------------------: | :------------------: | :--------------------: | :--------------------: | :--------------------: | :--------------------: | :-------: |
+| 01/04/2025 01:10 | Argentina Nacional B | Argentina |     CA Atlanta      |     Quilmes      |          2           |          0           |           1            |           5            |           0            |           0            | 171878251 |
+| 31/03/2025 00:30 | Argentina Nacional B | Argentina | Club Atletico Mitre | Gimnasia Mendoza |          1           |          1           |           4            |           8            |           2            |           4            | 171878249 |

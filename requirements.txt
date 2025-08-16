@@ -1,0 +1,3 @@
+seleniumbase
+pandas
+beautifulsoup4
